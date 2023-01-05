@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 
 
-AND = {"x1": [0,0,1,1], "x2": [0,1,0,1], "y": [0,0,0,1]}
+XOR = {"x1": [0,0,1,1], "x2": [0,1,0,1], "y": [0,1,1,0]}
 
-df = pd.DataFrame(AND)
+df = pd.DataFrame(XOR)
 
 print(df)
 
@@ -20,5 +20,5 @@ model.fit(X, y)
 
 _ = model.total_loss()
 
-save_model(model, filename="and.model")
-save_plot(df, file_name="and.png", model=model)
+save_model(model, filename="xor.model")
+save_plot(df, file_name="xor.png", model=model)
